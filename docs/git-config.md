@@ -1,16 +1,13 @@
-Git Config
-==========
+# Git Config
 
-User credentials
-----------------
+## User credentials
 
 ```shell
 git config user.name "Your Name"
 git config user.email "username@domain.tld"
 ```
 
-Signed commits
---------------
+## Signed commits
 
 Select a private key identifier from the available [GPG keys](gpg-keys.md#list-keys).
 
@@ -36,8 +33,7 @@ Alternatively, sign all commits for the repository using the git configuration.
 git config commit.gpgsign true
 ```
 
-Signed tags
------------
+## Signed tags
 
 Sign a tag using the git configuration GPG key:
 
