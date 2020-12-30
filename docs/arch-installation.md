@@ -82,8 +82,8 @@ The created volume group is now available at `/dev/my_volume_group/`.
 Create the logical volumes (partitions) within the volume group.
 
 ```shell
-lvcreate my_volume_group --name my_root_partition --size 50GB
-lvcreate my_volume_group --name my_homedir_partition --size 100%FREE
+lvcreate my_volume_group --name my_root_partition -l 50GB
+lvcreate my_volume_group --name my_homedir_partition -l 100%FREE
 ```
 
 Partition the new volumes.
@@ -140,7 +140,7 @@ arch-chroot /mnt
 ### Base packages
 
 ```shell
-pacman --sync linux-headers base-devel lvm2 sudo netctl dhcpcd wpa_supplicant wireless-tools dialog
+pacman --sync linux-headers base-devel lvm2 sudo netctl dhcpcd wpa_supplicant wireless_tools dialog
 ```
 
 ### Bootloader
@@ -156,7 +156,7 @@ Edit the default GRUB settings to decrypt partitions.
 ```shell
 # File:/etc/default/grub
 
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptodevice=/dev/nvme0n1p3:volumegroup:allow-discards quiet"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 cryptdevice=/dev/nvme0n1p3:my_volumegroup quiet"
 GRUB_ENABLE_CRYPTODISK=y
 ```
 
@@ -170,8 +170,14 @@ mount /dev/nvme0n1p1 /boot/EFI
 Install GRUB.
 
 ```shell
+# Set locale
 mkdir /boot/grub/locale
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+
+# Install GRUB to boot partition
+grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+
+# Create config for grub
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -255,5 +261,5 @@ Allow the user to use its sudo rights. Using `visudo` uncomment the following li
 ## Bonus packages
 
 ```shell
-pacman --sync nano vim
+pacman --sync acpi man-db nano vim
 ```

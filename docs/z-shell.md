@@ -1,3 +1,6 @@
 # Z Shell (ZSH)
 
-TODO
+```shell
+yay --sync zsh oh-my-zsh-git
+chsh --shell /bin/zsh
+```
