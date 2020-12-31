@@ -1,0 +1,9 @@
+#!/bin/sh
+
+i3lock \
+    --nofork \
+    --color 013370 \
+    --image=/usr/share/backgrounds/57d7q5_1920x1080.png \
+    --tiling \
+    --ignore-empty-password \
+    --show-failed-attempts
