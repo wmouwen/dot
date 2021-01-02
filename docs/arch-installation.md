@@ -121,6 +121,15 @@ Without the EFI directory mounted, generate the fstab file.
 genfstab -t UUID /mnt >> /mnt/etc/fstab
 ```
 
+Add a temporary filesystem for `/tmp` by adding a line to the fstab file.
+
+```shell
+# File: /mnt/etc/fstab
+
+# /tmp
+tmpfs  /tmp  tmpfs  rw,nodev,nosuid,noatime  0  0
+```
+
 ### Install the base system
 
 ```shell
