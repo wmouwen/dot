@@ -1,0 +1,8 @@
+[core]
+	editor = /usr/bin/nano
+[user]
+	name = Willem Mouwen
+[pull]
+	ff = only
+[commit]
+	gpgsign = true

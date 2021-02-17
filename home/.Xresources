@@ -1,3 +1,45 @@
+! special colors
+*.foreground:  #c0c5ce
+*.background:  #2b303b
+*.cursorColor:  #c0c5ce
+*fading:                          8
+*fadeColor:                       black
+*cursorColor:                     #1ABB9B
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
+
+! black
+*.color0:      #2b303b
+*.color8:      #65737e
+
+! red
+*.color1:      #bf616a
+*.color9:      #bf616a
+
+! green
+*.color2:      #a3be8c
+*.color10:     #a3be8c
+
+! yellow
+*.color3:      #ebcb8b
+*.color11:     #ebcb8b
+
+! blue
+*.color4:      #8fa1b3
+*.color12:     #8fa1b3
+
+! magenta
+*.color5:      #b48ead
+*.color13:     #b48ead
+
+! cyan
+*.color6:      #96b5b4
+*.color14:     #96b5b4
+
+! white
+*.color7:      #c0c5ce
+*.color15:     #eff1f5
+
 Xft.dpi:       96
 Xft.antialias: true
 Xft.hinting:   true
@@ -6,45 +48,55 @@ Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*background:                      #222D31
-*foreground:                      #d8d8d8
-*fading:                          8
-*fadeColor:                       black
-*cursorColor:                     #1ABB9B
-*pointerColorBackground:          #2B2C2B
-*pointerColorForeground:          #16A085
-
-!! black dark/light
-*color0:                          #222D31
-*color8:                          #585858
-
-!! red dark/light
-*color1:                          #ab4642
-*color9:                          #ab4642
-
-!! green dark/light
-*color2:                          #7E807E
-*color10:                         #8D8F8D
-
-!! yellow dark/light
-*color3:                          #f7ca88
-*color11:                         #f7ca88
-
-!! blue dark/light
-*color4:                          #7cafc2
-*color12:                         #7cafc2
-
-!! magenta dark/light
-*color5:                          #ba8baf
-*color13:                         #ba8baf
-
-!! cyan dark/light
-*color6:                          #1ABB9B
-*color14:                         #1ABB9B
-
-!! white dark/light
-*color7:                          #d8d8d8
-*color15:                         #f8f8f8
-
 Xcursor.theme:                    xcursor-breeze
 Xcursor.size:                     0
+
+! URxvt
+URxvt*termName: screen-256color
+URxvt*geometry: 240x84
+URxvt*loginShell: true
+URxvt*secondaryScreen: true
+URxvt*secondaryScroll: true
+URxvt*skipScroll: true
+URxvt*fading: 30
+URxvt*utmpInhibit: false
+URxvt*urgentOnBell: false
+URxvt*visualBell: true
+URxvt*mapAlert: true
+URxvt*mouseWheelScrollPage: false
+URxvt*background: Black
+URxvt*foreground: White
+URxvt*colorUL: yellow
+URxvt*underlineColor: yellow
+URxvt*font: xft:Fantasque Sans Mon:pixelsize=10
+!URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
+!URxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
+!URxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
+URxvt*saveLines: 0
+URxvt*buffered: true
+URxvt*hold: false
+URxvt*internalBorder:
+URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
+URxvt*perl-ext-common:
+URxvt*perl-ext:
+
+URxvt*scrollBar:         true
+URxvt*scrollBar_right:   true
+URxvt*scrollBar_floating: false
+URxvt*scrollColor: #777777
+URxvt*scrollstyle: plain
+URxvt*scrollTtyKeypress: true
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: false
+
+URxvt*transparent:       false
+
+URxvt.letterSpace: 0
+
+*antialias:  true
+*autohint:   true
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/opera
+URxvt.matcher.button: 1
+
