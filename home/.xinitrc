@@ -1,23 +1,22 @@
 #!/bin/sh
 
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
-
 # merge in defaults and keymaps
+sysresources=/etc/X11/xinit/.Xresources
 if [ -f $sysresources ]; then
   xrdb -merge $sysresources
 fi
 
+sysmodmap=/etc/X11/xinit/.Xmodmap
 if [ -f $sysmodmap ]; then
   xmodmap $sysmodmap
 fi
 
+userresources=$HOME/.Xresources
 if [ -f "$userresources" ]; then
   xrdb -merge "$userresources"
 fi
 
+usermodmap=$HOME/.Xmodmap
 if [ -f "$usermodmap" ]; then
   xmodmap "$usermodmap"
 fi
@@ -31,5 +30,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-nitrogen --restore &
 exec i3
+

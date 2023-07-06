@@ -1,6 +1,6 @@
 configuration {
-	modi: "drun,window,run,ssh";
-	font: "mono 10";
+ 	modi: "drun,window,run,ssh";
+	font: "JetBrians Mono 10";
 	combi-modi: "drun,window,run,ssh";
-	theme: "android_notification";
 }
+@theme "/usr/share/rofi/themes/sidebar.rasi"

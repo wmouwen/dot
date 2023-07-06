@@ -24,18 +24,24 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
+font pango:JetBrains Mono 8
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+exec --no-startup-id exec bash $HOME/.fehbg
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- sqlock
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $HOME/.config/i3/lock --nofork
 
-# Locking
-exec --no-startup-id xautolock -time 10 -locker sqlock
-bindsym $mod+Shift+minus exec --no-startup-id sqlock
+exec --no-startup-id xautolock -time 5 -locker $HOME/.config/i3/lock
+bindsym $mod+Shift+minus exec --no-startup-id $HOME/.config/i3/lock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -55,6 +61,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# move tiling windows via drag & drop by left-clicking into the title bar,
+# or left-clicking anywhere into the window while holding the floating modifier.
+tiling_drag modifier titlebar
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -62,12 +72,12 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec --no-startup-id dmenu_run_history
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec --no-startup-id rofi -show
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -200,6 +210,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-# Start polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh

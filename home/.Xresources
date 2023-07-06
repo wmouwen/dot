@@ -2,6 +2,9 @@
 *.foreground:  #c0c5ce
 *.background:  #2b303b
 *.cursorColor:  #c0c5ce
+
+*antialias:  true
+*autohint:   true
 *fading:                          8
 *fadeColor:                       black
 *cursorColor:                     #1ABB9B
@@ -50,53 +53,3 @@ Xft.lcdfilter: lcddefault
 
 Xcursor.theme:                    xcursor-breeze
 Xcursor.size:                     0
-
-! URxvt
-URxvt*termName: screen-256color
-URxvt*geometry: 240x84
-URxvt*loginShell: true
-URxvt*secondaryScreen: true
-URxvt*secondaryScroll: true
-URxvt*skipScroll: true
-URxvt*fading: 30
-URxvt*utmpInhibit: false
-URxvt*urgentOnBell: false
-URxvt*visualBell: true
-URxvt*mapAlert: true
-URxvt*mouseWheelScrollPage: false
-URxvt*background: Black
-URxvt*foreground: White
-URxvt*colorUL: yellow
-URxvt*underlineColor: yellow
-URxvt*font: xft:Fantasque Sans Mon:pixelsize=10
-!URxvt*boldFont: -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
-!URxvt*italicFont: xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
-!URxvt*boldItalicFont: xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
-URxvt*saveLines: 0
-URxvt*buffered: true
-URxvt*hold: false
-URxvt*internalBorder:
-URxvt*print-pipe: cat > $HOME/$(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
-URxvt*perl-ext-common:
-URxvt*perl-ext:
-
-URxvt*scrollBar:         true
-URxvt*scrollBar_right:   true
-URxvt*scrollBar_floating: false
-URxvt*scrollColor: #777777
-URxvt*scrollstyle: plain
-URxvt*scrollTtyKeypress: true
-URxvt*scrollTtyOutput: false
-URxvt*scrollWithBuffer: false
-
-URxvt*transparent:       false
-
-URxvt.letterSpace: 0
-
-*antialias:  true
-*autohint:   true
-
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/opera
-URxvt.matcher.button: 1
-
