@@ -1,5 +1,5 @@
 # Fonts
 
 ```shell
-pacman --sync ttf-dejavu noto-fonts ttf-fantasque-sans-mono
+pacman --sync ttf-jetbrains-mono noto-fonts-emoji
 ```
