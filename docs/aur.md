@@ -18,3 +18,10 @@ Edit the file /etc/pacman.conf and uncomment the following line
 
 Color
 ```
+
+## Mirror ranking
+
+```shell
+yay -S reflector
+reflector --sort=score --country=NL,BE,LU,DE > /etc/pacman.d/mirrorlist
+```
