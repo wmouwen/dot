@@ -17,6 +17,9 @@ Edit the file /etc/pacman.conf and uncomment the following line
 # File: /etc/pacman.conf
 
 Color
+CheckSpace
+VerbosePkgLists
+ParallelDownloads = 5
 ```
 
 ## Mirror ranking
