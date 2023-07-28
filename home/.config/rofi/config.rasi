@@ -1,6 +1,6 @@
 configuration {
  	modi: "drun,window,run,ssh";
-	font: "JetBrians Mono 10";
+	font: "JetBrains Mono 9";
 	combi-modi: "drun,window,run,ssh";
 }
 @theme "/usr/share/rofi/themes/sidebar.rasi"
