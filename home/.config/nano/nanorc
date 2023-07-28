@@ -1,0 +1,10 @@
+include /usr/share/nano/html.nanorc
+include /usr/share/nano/json.nanorc
+include /usr/share/nano/man.nanorc
+include /usr/share/nano/markdown.nanorc
+include /usr/share/nano/nanorc.nanorc
+include /usr/share/nano/php.nanorc
+include /usr/share/nano/sh.nanorc
+include /usr/share/nano/sql.nanorc
+include /usr/share/nano/xml.nanorc
+include /usr/share/nano/yaml.nanorc
