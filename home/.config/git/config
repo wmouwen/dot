@@ -1,11 +1,26 @@
 [core]
-editor = /usr/bin/nano
+editor = nano
+
+[color]
+ui = auto
+
+[column]
+ui = never
 
 [user]
 name = Willem Mouwen
 
+[init]
+defaultBranch = main
+
 [pull]
 ff = only
 
+[diff]
+renames = true
+
 [commit]
 gpgsign = true
+
+[blame]
+coloring = highlightRecent
