@@ -1,3 +1,5 @@
+include /usr/share/nano/c.nanorc
+include /usr/share/nano/cmake.nanorc
 include /usr/share/nano/html.nanorc
 include /usr/share/nano/json.nanorc
 include /usr/share/nano/man.nanorc
