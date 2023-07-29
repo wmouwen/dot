@@ -10,7 +10,7 @@ ZSH_THEME="fishy"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "essembeh" "gallifrey" "flazz" "half-life" "wedisagree" "ys" "dieter" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "fishy" "mortalscumbag" "essembeh" "gallifrey" "flazz" "half-life" "wedisagree" "ys" "dieter" )
 
 # Show dots while autocompletion is busy
 COMPLETION_WAITING_DOTS="true"
@@ -47,3 +47,4 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 alias screen-duplicate="~/.config/polybar/launch.sh"
 alias screen-extend="~/.config/polybar/launch.sh"
+
