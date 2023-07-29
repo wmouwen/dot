@@ -1,5 +1,6 @@
-*
+/*
 !/.gitignore
+
 !/alacritty
 !/git
 !/htop
@@ -9,5 +10,8 @@
 !/kitty
 !/nano
 !/neofetch
+!/polybar
 !/rofi
+
 !/user-dirs.dirs
+!/user-dirs.locale
