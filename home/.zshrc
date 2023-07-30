@@ -47,4 +47,4 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 alias screen-duplicate="~/.config/polybar/launch.sh"
 alias screen-extend="~/.config/polybar/launch.sh"
-
+alias mirrors-rank="sudo reflector --sort=score --country=NL,BE,LU,DE > /etc/pacman.d/mirrorlist"
