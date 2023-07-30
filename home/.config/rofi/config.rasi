@@ -1,6 +1,6 @@
 configuration {
- 	modi: "drun,window,run,ssh";
-	font: "JetBrains Mono 9";
+	modi: "drun,window,run,ssh";
 	combi-modi: "drun,window,run,ssh";
 }
-@theme "/usr/share/rofi/themes/sidebar.rasi"
+
+@theme "~/.config/rofi/windows11-list-dark.rasi"
