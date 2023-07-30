@@ -3,7 +3,7 @@
 i3lock \
     --nofork \
     --color 013370 \
-    --image=/usr/share/backgrounds/wallhaven-d5xwem.png \
+    --image=/usr/share/backgrounds/wallhaven-ne791l.png \
     --tiling \
     --ignore-empty-password \
     --show-failed-attempts
