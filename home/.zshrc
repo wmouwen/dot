@@ -45,6 +45,6 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias screen-duplicate="~/.config/polybar/launch.sh"
-alias screen-extend="~/.config/polybar/launch.sh"
+alias screen-duplicate="xrandr --output HDMI1 --same-as eDP1 --scale-from 1920x1080 --auto && ~/.config/polybar/launch.sh"
+alias screen-extend="xrandr --output HDMI1 --right-of eDP1 --scale-from 1920x1080 --auto && ~/.config/polybar/launch.sh"
 alias mirrors-rank="sudo reflector --sort=score --country=NL,BE,LU,DE > /etc/pacman.d/mirrorlist"
