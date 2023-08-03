@@ -1,9 +1,11 @@
 #!/bin/sh
 
+# /usr/share/backgrounds/wallhaven-ne791l.png
+
 i3lock \
     --nofork \
     --color 013370 \
-    --image=/usr/share/backgrounds/wallhaven-ne791l.png \
+    --image=/usr/share/backgrounds/wallhaven-4lj2qq.png \
     --tiling \
     --ignore-empty-password \
     --show-failed-attempts
