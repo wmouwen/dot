@@ -33,7 +33,7 @@ export GTK_THEME=Adwaita:dark
 # GPG password authentication in terminal
 export GPG_TTY=$(tty)
 
-# New Google authentication plugin for Kubernetes proxies
+export SYMFONY_IDE=phpstorm
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
