@@ -48,3 +48,4 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 alias screen-duplicate="xrandr --output HDMI-1 --same-as eDP-1 --scale-from 1920x1080 --auto && ~/.config/polybar/launch.sh"
 alias screen-extend="xrandr --output HDMI-1 --right-of eDP-1 --scale-from 1920x1080 --auto && ~/.config/polybar/launch.sh"
 alias mirrors-rank="sudo reflector --sort=score --country=NL,BE,LU,DE > /etc/pacman.d/mirrorlist"
+alias nah="git reset --hard && git clean -df"
