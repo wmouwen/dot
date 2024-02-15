@@ -5,7 +5,7 @@
 i3lock \
     --nofork \
     --color 013370 \
-    --image=$HOME/dot/backgrounds/wallhaven-4lj2qq.png \
+    --image=$HOME/dot/backgrounds/wallhaven-lqryyr.png \
     --tiling \
     --ignore-empty-password \
     --show-failed-attempts
